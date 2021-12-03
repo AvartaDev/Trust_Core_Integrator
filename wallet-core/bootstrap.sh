@@ -4,10 +4,10 @@
 set -e
 
 echo "#### Initializing... ####"
-# tools/install-dependencies
+tools/install-dependencies
 
 echo "#### Generating files... ####"
-# tools/generate-files
+tools/generate-files
 
 echo "#### Building... ####"
 cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Debug

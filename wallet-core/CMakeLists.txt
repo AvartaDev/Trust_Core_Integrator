@@ -15,9 +15,9 @@ set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
 set(CMAKE_OSX_DEPLOYMENT_TARGET "10.14" CACHE STRING "Minimum OS X deployment version" FORCE)
 
-#if (NOT ("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang"))
-#    message(FATAL_ERROR "You should use clang compiler, instead of current ${CMAKE_CXX_COMPILER_ID}. ")
-#endif()
+if (NOT ("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang"))
+    message(FATAL_ERROR "You should use clang compiler, instead of current ${CMAKE_CXX_COMPILER_ID}. ")
+endif()
 
 if ("$ENV{PREFIX}" STREQUAL "")
     set(PREFIX "${CMAKE_SOURCE_DIR}/build/local")
