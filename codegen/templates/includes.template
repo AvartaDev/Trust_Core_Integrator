@@ -1,5 +1,0 @@
-#include "generated/{{ name }}.h"
-
-{% for include in includes %}
-{{ include }}
-{%- endfor %}
